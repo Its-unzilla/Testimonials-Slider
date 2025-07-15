@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials Slider</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- PAGE 1 - SLIDER -->
+    <section class="testimonial-slider" aria-label="Customer Testimonials">
+      <div class="testimonial-container" id="testimonial-container">
+        <!-- testimonials injected dynamically -->
+      </div>
+
+      <div class="slider-controls">
+        <button class="prev" aria-label="Previous testimonial">←</button>
+        <button class="next" aria-label="Next testimonial">→</button>
+      </div>
+
+      <div class="progress-dots" id="progress-dots" role="tablist"></div>
+
+      <div class="extra-controls">
+        <button id="leave-review-btn">Leave a Review</button>
+      </div>
+    </section>
+
+    <!-- PAGE 2 - REVIEW FORM -->
+    <section class="review-form-section">
+      <h2>Leave a Review</h2>
+      <form id="review-form" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" maxlength="50" required placeholder="John Doe">
+          <small class="error-message" id="name-error"></small>
+        </div>
+        <div class="form-group">
+          <label for="comment">Your Comment:</label>
+          <textarea id="comment" name="comment" maxlength="300" required placeholder="Your feedback..."></textarea>
+          <small class="error-message" id="comment-error"></small>
+        </div>
+        <div class="form-group stars-input">
+          <label>Rating:</label>
+          <div class="star-selector" id="star-selector" role="radiogroup">
+            <!-- stars injected dynamically -->
+          </div>
+          <small class="error-message" id="stars-error"></small>
+        </div>
+        <button type="submit">Submit Review</button>
+      </form>
+      <div class="back-btn-container">
+        <button id="back-btn">← Back to Testimonials</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Toast for notifications -->
+  <div id="toast"></div>
+
+  <script src="slider.js"></script>
+</body>
+</html>
